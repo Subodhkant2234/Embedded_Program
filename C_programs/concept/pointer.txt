@@ -1,0 +1,48 @@
+1. Pointer to constant.
+	Pointer to constant can be declared in following two ways.
+	const int *ptr;
+           (or)
+	int const *ptr;
+We can change pointer to point to any other integer variable, but cannot change value of object (entity) pointed using pointer ptr. Pointer is stored in read-write area (stack in present case). Object pointed may be in read only .
+
+2. Constant pointer to variable.
+ int *const ptr;
+Above declaration is constant pointer to integer variable, means we can change value of object pointed by pointer, but cannot change the pointer to point another variable.
+
+3. constant pointer to constant
+   const int *const ptr;
+   Above declaration is constant pointer to constant variable which means we cannot change value pointed by pointer as well as we cannot 
+   point the pointer to other variable.
+
+
+Constant Pointer:
+Lets first understand what a constant pointer is. A constant pointer is a pointer that cannot change the address its holding. In other words, we can say that once a constant pointer points to a variable then it cannot point to any other variable.
+
+
+Pointer to Constant:
+As evident from the name, a pointer through which one cannot change the value of variable it points is known as a pointer to constant. These type of pointers can change the address they point to but cannot change the value kept at those address.
+
+Constant Pointer to a Constant:
+If you have understood the above two types then this one is very easy to understand as its a mixture of the above two types of pointers. A constant pointer to constant is a pointer that can neither change the address its pointing to and nor it can change the value kept at that address.
+
+static variables are those variables whose life time remains equal to the life time of the program.
+In C, static variables can only be initialized using constant literals. Intialiser element should be constant,it should not be an expression or function call.
+ A static variables or functions have internal linkage. An internal linkage variables or functions are visible to the file where it has declared.
+
+
+
+
+
+
+
+ No 	Macro	Function
+1	Macro is Preprocessed	Function is Compiled
+2	No Type Checking	Type Checking is Done
+3	Code Length Increases	Code Length remains Same
+4	Use of macro can lead to side effect	No side Effect
+–	
+5	Speed of Execution is Faster	Speed of Execution is Slower
+6	Before Compilation macro name is replaced by macro value	During function call , Transfer of Control takes place
+7	Useful where small code appears many time	Useful where large code appears many time
+8	Generally Macros do not extend beyond one line	Function can be of any number of lines
+9	Macro does not Check Compile Errors	Function Checks Compile Errors

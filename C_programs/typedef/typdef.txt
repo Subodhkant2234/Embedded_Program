@@ -1,0 +1,1 @@
+typedef is a reserved keyword in the C and C++ programming languages. It is used to create an alias name for another data type.[1] As such, it is often used to simplify the syntax of declaring complex data structures consisting of struct and union types, but is just as common in providing specific descriptive type names for integer data types of varying lengths.

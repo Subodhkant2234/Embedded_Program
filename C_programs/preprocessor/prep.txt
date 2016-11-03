@@ -1,0 +1,49 @@
+/* 	The syntax for all Macro conditions  is given below */
+
+1.	#if const-exp
+	statements
+  	#endif
+
+
+2.	#if const-exp
+	statements
+	#else 
+        statements
+	#endif
+
+
+3.	#if const-exp
+	statements
+	#elif const-exp
+	statements
+	#elsif const-exp
+	statements
+	#else
+	statements
+	#endif
+
+4.	#ifdef macro_name
+	................
+	#endif
+
+
+5.	#ifndef macro_name 
+	..................
+	#endif
+
+6.	#if defined (macro_name) is equivalent to #ifdef macro_name 
+	
+
+7.	#if defined (A)
+	................
+	#elif defined (B)
+	................
+	#elif defined (C)
+	................
+	#endif 
+8.	Commenting a part of code 
+	#ifndef COMMENT
+	statements
+	statements
+	#endif
+

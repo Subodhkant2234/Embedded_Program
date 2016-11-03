@@ -1,0 +1,59 @@
+
+
+Simplifying a declaration
+
+A typedef can be used to simplify the declaration for a compound type (struct, union) or pointer type.[3] For example,
+
+struct MyStruct {
+    int data1;
+    char data2;
+};
+
+Here (above) a struct MyStruct data type has been defined. To declare a variable of this type in C (below) the struct key word is required (though it may be omitted in C++):
+
+struct MyStruct a;
+
+A typedef can be used to eliminate the need for the struct key word in C. For example, with:
+
+typedef struct MyStruct newtype;
+
+we can now create a variable of this type with:
+
+newtype a;
+
+Note that the structure definition and typedef can instead be combined into a single statement:
+
+typedef struct MyStruct {
+    int data1;
+    char data2;
+} newtype;
+
+Or simply we can also use it as:
+
+typedef struct {
+    int data1;
+    char data2;
+} newtype;
+
+And then create object of structure : newtype abc, def; for above both cases. It will create an object named abc and def of that structure.
+
+ The tag name in a struct, union, or enum definition is optional. Many programmers fold the struct definition into the typedef and dispense with the tag altogether, as in:
+
+
+typedef struct
+  {
+  ...
+  } T;
+
+
+
+
+typedef struct
+  {
+  ...
+  list_node *next; // error
+  } list_node;
+
+the compiler will complain because the declaration for member next refers to list_node before list_node is declared.
+
+With a self-referential struct, you have no choice but to declare a tag for the struct. If you prefer to use a typedef name thereafter, you must declare both the tag and the typedef.

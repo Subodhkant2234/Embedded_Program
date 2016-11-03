@@ -1,0 +1,12 @@
+Bit from 0th 
+Position start with 0
+
+subodh@subodh:~/Embedded/C_programs/Bitwise$ ./a.out 4294967295  10 5
+
+11111111 11111111 11111111 11111111 
+11111111 11111111 11111000 00011111 
+subodh@subodh:~/Embedded/C_programs/Bitwise$
+4294967295 = 0xffffffff
+Pos1:10
+Pos2:5
+Manipulating the bits from above bit positions.

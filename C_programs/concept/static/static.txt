@@ -1,0 +1,6 @@
+A static variable can be defined in a header file, but this would cause each source file that included the header file to have its own private copy of the variable, which is probably not what was intended.
+
+
+We can not declare a static variable without defining it. We can declare static variables in header file when their definition should also be provided in the same header file. It is generally an idea to use static variables in the header file but it creates some problem that it makes the static variables as a private copy of header file i.e it can not be used elsewhere. 
+
+Static automatic variables continue to exist even after the block in which they are defined terminates. Thus, the value of a static variable in a function is retained between repeated function calls to the same function. The scope of static automatic variables is identical to that of automatic variables, i.e. it is local to the block in which it is defined; however, the storage allocated becomes permanent for the duration of the program. Static variables may be initialized in their declarations; however, the initializers must be constant expressions, and initialization is done only once at compile time when memory is allocated for the static variable

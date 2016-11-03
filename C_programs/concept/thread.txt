@@ -1,0 +1,6 @@
+A.2: What are threads?
+A thread is a sequential flow of control through a program. Multi-threaded programming is, thus, a form of parallel programming where several threads of control are executing concurrently in the program. All threads execute in the same memory space, and can therefore work concurrently on shared data.
+
+Multi-threaded programming differs from using multiple Unix processes in that all threads share the same memory space (and a few other system resources, such as file descriptors), instead of running in their own memory space as is the case with Unix processes.
+
+Threads are useful for several reasons. First, they allow a program to exploit multi-processor machines: the threads can run in parallel on several processors, allowing a single program to divide its work between several processors, thus running faster than a single-threaded program, which runs on only one processor at a time. Second, even on uniprocessor machines, threads allow overlapping I/O and computations in a simple way. Last, some programs are best expressed as several threads of control that communicate together, rather than as one big monolithic sequential program. Examples include server programs, overlapping asynchronous I/O, and graphical user interfaces. 

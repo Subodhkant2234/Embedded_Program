@@ -1,0 +1,8 @@
+A global variable is variable that can be accessed throughout the program and changes made to global variable persist, while the local variable can be used within a block where it is declared.
+
+Example program for global variable in C:
+
+    The scope of global variables will be throughout the program. These variables can be accessed from anywhere in the program.
+    This variable is defined outside the main function. So that, this variable is visible to main function and all other sub functions.
+
+A global variable is a variable that is declared outside all functions. A local variable can only be used in the function where it is declared. A global variable can be used in all functions.

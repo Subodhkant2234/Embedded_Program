@@ -1,0 +1,20 @@
+10)How to pack a structure?
+
+We can pack any structure using __attribute__((__packed__)) in gcc. Example -
+
+typdef struct A __attribute __((__packed__))
+{
+char c;
+int i;
+}B;
+
+We can also use, pragma pack like this -
+
+#pragma pack(1)
+typedef struct A
+{ 
+char c;
+int I;
+}B;
+
+In both cases the size of the structure will be 5. But remember, the pragma pack and the other method mentioned, both are compiler dependent.

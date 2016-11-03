@@ -1,0 +1,56 @@
+extern tells the compiler that this data is defined somewhere and will be connected with the linker.
+
+With the help of the responses here and talking to a few friends here is the practical example of a use of extern.
+
+Example 1 - to show a pitfall:
+
+File stdio.h:
+
+int errno;
+/* other stuff...*/
+
+myCFile1.c:
+#include <stdio.h>
+
+Code...
+
+myCFile2.c:
+#include <stdio.h>
+
+Code...
+
+If myCFile1.o and myCFile2.o are linked, each of the c files have separate copies of errno. This is a problem as errno is suppose to be constant over all linked files.
+
+Example 2 - The fix.
+
+File stdio.h:
+
+extern int errno;
+/* other stuff...*/
+
+File stdio.c
+
+int errno;
+
+myCFile1.c:
+#include <stdio.h>
+
+Code...
+
+myCFile2.c:
+#include <stdio.h>
+
+Code...
+
+Now if both myCFile1.o and MyCFile2.o are linked by the linker they will both point to the same errno. Thus, solving the implementation with extern.
+
+
+################################################################################################################################################
+
+
+If you put a definition in a header file, you will end up with multiple definitions when multiple source files are involved.
+
+For example, suppose both main.c and other.c include foo.h. When you compile each of these files you'll get main.o and other.o, both of which have a definition of int foo. If you then attempt to link main.o and other.o into a single executable, you'll get a linker error stating that int foo was defined twice.
+
+To do this properly, you declare your variable in the header file as extern int foo. Then, in one (and only one) source file you define the variable with int foo.
+
